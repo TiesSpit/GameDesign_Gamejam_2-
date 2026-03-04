@@ -7,7 +7,7 @@ public class UpgradeMoreMoneyClick : Upgrade
 
     protected override void DoUpgrade()
     {
-        base.DoUpgrade();
+        base.DoUpgrade(); 
         ClickManager.Instance.IncreaseClickMoney(increaseAmount);
     }
 }
