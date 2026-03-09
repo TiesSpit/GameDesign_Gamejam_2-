@@ -10,4 +10,9 @@ public class UpgradeMoreMoneyClick : Upgrade
         base.DoUpgrade(); 
         ClickManager.Instance.IncreaseClickMoney(increaseAmount);
     }
+
+    private void OnDestroy()
+    {
+        ClickManager.Instance.IncreaseClickMoney(-increaseAmount);
+    }
 }

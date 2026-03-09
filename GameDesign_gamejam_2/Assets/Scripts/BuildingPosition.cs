@@ -6,6 +6,8 @@ public class BuildingPosition : MonoBehaviour
     [SerializeField]
     private Upgrade heldUpgrade;
 
+    [SerializeField]
+    private Transform spawnPos;
 
     public bool SpawnBuilding(Upgrade pUpgrade)
     {
@@ -16,7 +18,7 @@ public class BuildingPosition : MonoBehaviour
         }
         else
         {
-            heldUpgrade = pUpgrade.SpawnUpgrade(transform).GetComponent<Upgrade>();
+            heldUpgrade = pUpgrade.SpawnUpgrade(spawnPos).GetComponent<Upgrade>();
             return true;
         }
     }

@@ -7,6 +7,7 @@ public class Upgrade : MonoBehaviour
 
     [SerializeField] protected int sellValue;
 
+    [SerializeField] protected string type;
 
     public GameObject SpawnUpgrade(Transform pPosition)
     {
@@ -22,6 +23,6 @@ public class Upgrade : MonoBehaviour
 
     public int GetCost() {  return cost; }
     public int GetSellValue() { return sellValue; }
-
+    public string GetUpgrType() { return type; }
 
 }

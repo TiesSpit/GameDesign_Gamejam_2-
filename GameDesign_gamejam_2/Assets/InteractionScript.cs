@@ -27,7 +27,10 @@ public class InteractionScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cameraObject.position, cameraObject.TransformDirection(Vector3.forward), out hit, interactRange, layerMask))
         {
-            
+            if (hit.transform.TryGetComponent(out InteractButton button))
+            {
+                button.Interact();
+            }
 
             if (hit.transform.tag.ToLower() == "button")
             {
