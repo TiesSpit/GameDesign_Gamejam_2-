@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0687600544e68fc4bb8bba073dc00eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  costIncrease: 0.2
   buildingPositions:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  builtBuildingAmount: 0

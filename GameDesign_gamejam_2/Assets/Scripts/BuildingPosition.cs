@@ -6,6 +6,8 @@ public class BuildingPosition : MonoBehaviour
     [SerializeField]
     private Upgrade heldUpgrade;
 
+    [SerializeField]
+    private Transform spawnPos;
 
     public bool SpawnBuilding(Upgrade pUpgrade)
     {
@@ -16,7 +18,8 @@ public class BuildingPosition : MonoBehaviour
         }
         else
         {
-            heldUpgrade = pUpgrade.SpawnUpgrade(transform).GetComponent<Upgrade>();
+            UpgradeManager.Instance?.ChangeBuildingAmount(1);
+            heldUpgrade = pUpgrade.SpawnUpgrade(spawnPos).GetComponent<Upgrade>();
             return true;
         }
     }
@@ -27,6 +30,7 @@ public class BuildingPosition : MonoBehaviour
         {
             int sellValue = heldUpgrade.GetSellValue();
             Destroy(heldUpgrade.gameObject);
+            UpgradeManager.Instance?.ChangeBuildingAmount(-1);
             return sellValue;
         }
 

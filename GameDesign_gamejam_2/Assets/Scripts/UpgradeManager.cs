@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    [SerializeField] private float costIncrease;
+
+    [Header("Debug")]
     [SerializeField]
     private BuildingPosition[] buildingPositions;
 
+    [SerializeField] private int builtBuildingAmount;
 
 
 
@@ -65,10 +69,17 @@ public class UpgradeManager : MonoBehaviour
             }
         }
 
-
-
         return false;
     }
 
+
+    public void ChangeBuildingAmount(int pAmount)
+    {
+        builtBuildingAmount += pAmount;
+    }
+    public float GetCostMultiplier()
+    {
+        return costIncrease * builtBuildingAmount + 1;
+    }
 
 }
