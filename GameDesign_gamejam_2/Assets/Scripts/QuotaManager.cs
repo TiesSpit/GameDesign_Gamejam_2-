@@ -95,6 +95,9 @@ public class QuotaManager : MonoBehaviour
 
     public int GetFinalQuota()
     {
-        return quotas[round - 1];
+        if (round - 1 >= 0)
+            return quotas[round - 1];
+        else 
+            return 0;
     }
 }

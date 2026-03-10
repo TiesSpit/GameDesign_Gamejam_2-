@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: enemyPrefabs.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: 'enemyPrefabs.Array.data[0]'

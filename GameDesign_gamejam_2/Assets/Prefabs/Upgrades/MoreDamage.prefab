@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
+      propertyPath: 'enemyPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3580195560422729955, guid: ffd0181d1ab1d9d43b723a2900096c20, type: 3}
     - target: {fileID: 2585278952793094295, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -82,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c6316bd6b214a4fbd44b876711903e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 15
+  cost: 20
   sellValue: 2
   type: More Damage
   damageIncreaseAmount: 1
