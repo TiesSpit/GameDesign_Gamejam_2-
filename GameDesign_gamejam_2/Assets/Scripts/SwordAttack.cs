@@ -28,7 +28,7 @@ public class SwordAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("attack");
+            //Debug.Log("attack");
 
             Collider[] hitEnemies =
             Physics.OverlapSphere(

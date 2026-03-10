@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
             Enemy randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
             Instantiate(randomEnemy, spawnPos, randomEnemy.transform.rotation, transform);
-            Debug.Log(randomEnemy + "  " + transform.position);
+            //Debug.Log(randomEnemy + "  " + transform.position);
         }
     }
 }

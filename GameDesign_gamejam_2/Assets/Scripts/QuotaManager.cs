@@ -13,7 +13,7 @@ public class QuotaManager : MonoBehaviour
     [SerializeField] private float endlessExpIncrease;
 
     [Header("Debug")]
-    [SerializeField] private int round;
+    [SerializeField] private static int round;
 
     [SerializeField] private float roundTimer;
 
@@ -21,6 +21,15 @@ public class QuotaManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI quotaText;
     [SerializeField] private TextMeshProUGUI timerText;
 
+    public static QuotaManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -48,7 +57,8 @@ public class QuotaManager : MonoBehaviour
         {
             if (roundTimer < 0)
             {
-                Debug.LogWarning("Game over!!!");
+                //Debug.LogWarning("Game over!!!");
+                SceneChanger.instance.GameOver();
             }
         }
         else
@@ -78,4 +88,13 @@ public class QuotaManager : MonoBehaviour
         timerText.text = Mathf.RoundToInt(roundTimer).ToString();
     }
 
+    public void SetRoundToZero()
+    {
+        round = 0;
+    }
+
+    public int GetFinalQuota()
+    {
+        return quotas[round - 1];
+    }
 }

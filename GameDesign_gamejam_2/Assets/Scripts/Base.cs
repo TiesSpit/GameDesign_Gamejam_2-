@@ -9,4 +9,12 @@ public class Base : MonoBehaviour
     {
         instance = this;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Enemy>())
+        {
+            SceneChanger.instance.GameOver();
+        }
+    }
 }
