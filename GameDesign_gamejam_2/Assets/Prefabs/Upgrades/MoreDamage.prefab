@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5847740215321088708
+--- !u!1001 &3690858623645293680
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,30 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-      propertyPath: enemyPrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8654682736087557171, guid: 1c308e90d4bda0841aa55dfbad351929, type: 3}
-    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 3580195560422729955, guid: ffd0181d1ab1d9d43b723a2900096c20, type: 3}
-    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[2]'
-      value: 
-      objectReference: {fileID: 3251965016596783721, guid: a54f67c69b6e6b345a4fad821a79659e, type: 3}
-    - target: {fileID: 1404197633032729139, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[3]'
-      value: 
-      objectReference: {fileID: 7765345367080652455, guid: 990ae451c807e7b4893a2db4fef8595e, type: 3}
     - target: {fileID: 2585278952793094295, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6d95bb83964154bab97d802bd74fa5, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fb98f7d3343eea43ba8de2ca23ede46, type: 2}
     - target: {fileID: 6774216353716182974, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -74,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8401115045862285884, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       propertyPath: m_Name
-      value: MoneyPerSecond
+      value: MoreDamage
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3246422274649211764, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
@@ -83,26 +63,26 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8401115045862285884, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4884359242921380896}
+      addedObject: {fileID: 2080212664200194230}
   m_SourcePrefab: {fileID: 100100000, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
---- !u!1 &2716120420669812984 stripped
+--- !u!1 &5165155722536631884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8401115045862285884, guid: cca0e7a7f2fbee444a6b5d443567306f, type: 3}
-  m_PrefabInstance: {fileID: 5847740215321088708}
+  m_PrefabInstance: {fileID: 3690858623645293680}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4884359242921380896
+--- !u!114 &2080212664200194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2716120420669812984}
+  m_GameObject: {fileID: 5165155722536631884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6546dd36cd540f48a5ae3daf864b4d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 53c6316bd6b214a4fbd44b876711903e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 10
-  sellValue: 3
-  type: Passive Money
-  increaseAmount: 1
+  cost: 15
+  sellValue: 2
+  type: More Damage
+  damageIncreaseAmount: 1

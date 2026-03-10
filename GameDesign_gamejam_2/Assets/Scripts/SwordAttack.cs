@@ -2,17 +2,31 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
-    private bool canAttack;
-
     [SerializeField] private Transform attackPoint;
 
     [SerializeField] private float attackRange;
 
+    [SerializeField] public int damage;
+
     public LayerMask enemyLayers;
+
+    public static SwordAttack instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("attack");
 
@@ -25,7 +39,7 @@ public class SwordAttack : MonoBehaviour
 
             foreach (Collider enemy in hitEnemies)
             {
-                Destroy(enemy.gameObject);
+                enemy.GetComponent<Enemy>().TakeDamage(damage);
             }
         }        
     }
