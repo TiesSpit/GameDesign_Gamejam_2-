@@ -14,7 +14,12 @@ public class BuyUpgradeUI : MonoBehaviour
     {
         if (upgrade == null) upgrade = GetComponent<InteractButton>().GetUpgrade();
         UpdateUI();
-        Upgrade.OnUpgradeBought += UpdateUI;        
+        Upgrade.OnUpgradeBoughtSold += UpdateUI;        
+    }
+
+    private void OnDestroy()
+    {
+        Upgrade.OnUpgradeBoughtSold -= UpdateUI;
     }
 
 

@@ -28,9 +28,9 @@ public class BuildingPosition : MonoBehaviour
     {
         if (heldUpgrade != null)
         {
+            UpgradeManager.Instance?.ChangeBuildingAmount(-1);
             int sellValue = heldUpgrade.GetSellValue();
             Destroy(heldUpgrade.gameObject);
-            UpgradeManager.Instance?.ChangeBuildingAmount(-1);
             return sellValue;
         }
 

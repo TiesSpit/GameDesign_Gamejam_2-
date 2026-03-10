@@ -11,7 +11,7 @@ public class UpgradeMoneyPerSecond : Upgrade
         ClickManager.Instance.IncreaseMoneyPerSecond(increaseAmount);
     }
 
-    private void OnDestroy()
+    protected override void DoRevert()
     {
         ClickManager.Instance.IncreaseMoneyPerSecond(-increaseAmount);
     }

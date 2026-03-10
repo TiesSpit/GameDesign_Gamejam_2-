@@ -11,7 +11,7 @@ public class UpgradeMoreMoneyClick : Upgrade
         ClickManager.Instance.IncreaseClickMoney(increaseAmount);
     }
 
-    private void OnDestroy()
+    protected override void DoRevert()
     {
         ClickManager.Instance.IncreaseClickMoney(-increaseAmount);
     }

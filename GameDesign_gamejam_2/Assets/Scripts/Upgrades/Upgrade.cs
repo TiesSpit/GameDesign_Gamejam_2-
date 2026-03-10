@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour
 {
-    public static event Action OnUpgradeBought;
+    public static event Action OnUpgradeBoughtSold;
 
     [SerializeField] protected int cost;
 
@@ -19,9 +19,18 @@ public class Upgrade : MonoBehaviour
 
     protected virtual void DoUpgrade()
     {
-        OnUpgradeBought?.Invoke();
+        OnUpgradeBoughtSold?.Invoke();
     }
 
+    protected virtual void DoRevert()
+    {
+
+    }
+    private void OnDestroy()
+    {
+        OnUpgradeBoughtSold?.Invoke();
+        DoRevert();
+    }
 
     public int GetCost() 
     {  
