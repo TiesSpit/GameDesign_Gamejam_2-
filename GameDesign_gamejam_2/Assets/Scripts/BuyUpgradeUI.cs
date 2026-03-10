@@ -10,11 +10,13 @@ public class BuyUpgradeUI : MonoBehaviour
     [Header("Set automatically")]
     [SerializeField] Upgrade upgrade;
 
-    private void OnEnable()
+    private void Start()
     {
         if (upgrade == null) upgrade = GetComponent<InteractButton>().GetUpgrade();
         UpdateUI();
+        Upgrade.OnUpgradeBought += UpdateUI;        
     }
+
 
     private void UpdateUI()
     {

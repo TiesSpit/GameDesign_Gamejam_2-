@@ -18,6 +18,7 @@ public class BuildingPosition : MonoBehaviour
         }
         else
         {
+            UpgradeManager.Instance?.ChangeBuildingAmount(1);
             heldUpgrade = pUpgrade.SpawnUpgrade(spawnPos).GetComponent<Upgrade>();
             return true;
         }
@@ -29,6 +30,7 @@ public class BuildingPosition : MonoBehaviour
         {
             int sellValue = heldUpgrade.GetSellValue();
             Destroy(heldUpgrade.gameObject);
+            UpgradeManager.Instance?.ChangeBuildingAmount(-1);
             return sellValue;
         }
 
